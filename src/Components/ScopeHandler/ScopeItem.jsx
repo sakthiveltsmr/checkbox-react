@@ -11,6 +11,7 @@ const ScopeItem = ({
   //   console.log(selectedScopeCategories);
   const { item, resourceIndex, scopeIndex } = scope;
   const { label, value, category, id, type, checked } = item;
+  console.log("items:", scope);
 
   const handleChange = (data) => {
     onChange && onChange(data);
@@ -18,7 +19,7 @@ const ScopeItem = ({
 
   const isReadScope = () => {
     // value=== "read" && selectedScopeCategories
-  }
+  };
   const isForceChecked = () => {
     if (forceChecked || isReadScope()) return true;
     return false;
