@@ -12,6 +12,7 @@ function App() {
 
   const resourceClickHandler = useCallback(
     (data) => {
+      console.log("data", data);
       const cacheResources = { ...resources };
       const { resourceIndex } = data;
       cacheResources[resourceIndex].checked = !resources[resourceIndex].checked;
